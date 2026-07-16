@@ -400,35 +400,41 @@ function Navbar() {
 
                 <div className="mt-5">
 
-                      {navItems.map((item, index) => {
-                        const Icon = item.icon;
+                    {navItems.map((item, index) => {
 
-                        return (
-                          <button
-                            key={index}
-                            onClick={() => navigate(item.path)}
-                            className="
-                              group
-                              flex
-                              items-center
-                              gap-3
-                              h-full
-                              px-3
-                              transition-all
-                              duration-300
-                            "
-                          >
+                    const Icon = item.icon;
+
+                    return (
+
+                        <button
+                          key={index}
+                          onClick={() => {
+                            navigate(item.path);
+                            setMenuOpen(false); 
+                          }}
+                          className="w-full flex justify-between items-center py-4 border-b"
+                        >
+
+                        <div className="flex items-center gap-3">
+
                             <Icon
-                              size={22}
-                              className="text-white/90 group-hover:scale-110 transition-transform"
+                            size={20}
+                            className="text-[#0B2D87]"
                             />
 
-                            <span className="text-white text-[15px] font-semibold whitespace-nowrap tracking-wide">
-                              {item.title}
+                            <span className="font-medium">
+                            {item.title}
                             </span>
-                          </button>
-                        );
-                      })}
+
+                        </div>
+
+                        <ChevronDown size={18} />
+
+                        </button>
+
+                    );
+
+                    })}
 
                 </div>
 
