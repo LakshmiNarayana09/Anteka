@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const tabs = [
   "Overview",
@@ -12,6 +13,7 @@ const tabs = [
 
 const ProductTabs = () => {
   const [activeTab, setActiveTab] = useState("Overview");
+  const navigate = useNavigate();
 
   return (
     <div className="max-w-7xl mx-auto px-4 lg:px-8 mt-6">
@@ -20,7 +22,19 @@ const ProductTabs = () => {
         {tabs.map((tab) => (
           <button
             key={tab}
-            onClick={() => setActiveTab(tab)}
+            onClick={() => {
+                      if (tab === "Delivery") {
+                        navigate("/delivery");
+                        return;
+                      }
+
+                      if (tab === "Pickup") {
+                        navigate("/pickup");
+                        return;
+                      }
+
+                      setActiveTab(tab);
+                    }}
             className={`flex-1 py-4 text-sm font-medium transition-all border-b-2 ${
               activeTab === tab
                 ? "border-[#F5C542] text-gray-900 bg-white"
@@ -38,7 +52,19 @@ const ProductTabs = () => {
           {tabs.map((tab) => (
             <button
               key={tab}
-              onClick={() => setActiveTab(tab)}
+              onClick={() => {
+                        if (tab === "Delivery") {
+                          navigate("/delivery");
+                          return;
+                        }
+
+                        if (tab === "Pickup") {
+                          navigate("/pickup");
+                          return;
+                        }
+
+                        setActiveTab(tab);
+                      }}
               className={`px-5 py-3 rounded-md whitespace-nowrap text-sm font-medium transition ${
                 activeTab === tab
                   ? "bg-[#2FD3AE] text-white"

@@ -8,6 +8,7 @@ import BlogPage from "./pages/BlogPage";
 import ArticlesPage from "./pages/ArticlesPage";
 import ReviewsPage from './pages/ReviewsPage'
 import AboutPage from "./pages/AboutPage";
+import DeliveryPickupPage from './pages/DeliveryPickupPage'
 
 
 function App() {
@@ -33,6 +34,10 @@ function App() {
         <Route path="/reviews" element={<ReviewsPage />} />
 
         <Route path="/about" element={<AboutPage />} />
+
+        <Route path="/delivery" element={<DeliveryPickupPage />} />
+
+        <Route path="/pickup" element={<DeliveryPickupPage />} />
 
       </Routes>
     </div>

@@ -10,7 +10,7 @@ import Features from '../components/pages/about/Features'
 import CompanyHistory from '../components/pages/about/CompanyHistory'
 import Statistics from '../components/pages/about/Statistics'
 import Certificates from '../components/pages/about/Certificates'
-
+import Benefits from "../components/benefits/Benefits";
 
 
 const AboutPage = () => {
@@ -27,6 +27,8 @@ const AboutPage = () => {
         <PageTitle />
 
         <AboutIntro />
+
+        <Benefits />
 
         <Features />
 

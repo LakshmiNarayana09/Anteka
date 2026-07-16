@@ -42,7 +42,7 @@ function ProductDetails() {
 
           
           <div>
-            {/* PriceCard component will go here */}
+            
             <PriceCard />
           </div>
 
