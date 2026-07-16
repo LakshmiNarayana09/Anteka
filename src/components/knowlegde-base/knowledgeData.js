@@ -1,0 +1,173 @@
+import {
+  Pill,
+  PillBottle,
+  Sparkles,
+  HandPlatter,
+  Cross,
+  PawPrint,
+  Baby,
+  Eye,
+  MonitorSmartphone,
+} from "lucide-react";
+
+const knowledgeData = [
+  {
+    id: 1,
+    title: "Medicines",
+    icon: Pill,
+    large: true,
+    items: [
+      "Women's Health",
+      "Allergy",
+      "Anesthesia",
+      "Antibiotics",
+      "Blood Disorders",
+      "Pain & Fever",
+      "Hemorrhoids",
+      "Eye Care",
+      "Parasite Treatment",
+      "Homeopathy",
+      "Diabetes",
+      "Diagnostic Products",
+      "Respiratory Care",
+      "Digestive Health",
+      "Dental Care",
+      "Immune Support",
+      "Skin Care",
+      "Urinary Health",
+      "Metabolism",
+      "Neurology",
+      "Disinfectants",
+      "Oncology",
+      "Poison Treatment",
+      "Nutritional Supplements",
+      "Antiviral Medicines",
+      "Antifungal Medicines",
+      "More Categories",
+    ],
+  },
+
+  {
+    id: 2,
+    title: "Vitamins & Supplements",
+    icon: PillBottle,
+    large: true,
+    items: [
+      "Amino Acids",
+      "L-Carnitine",
+      "Antioxidants",
+      "Eye Vitamins",
+      "Multivitamins",
+      "Healthy Habits",
+      "Weight Management",
+      "Diabetes Support",
+      "Menopause Care",
+      "Cold & Flu Support",
+      "Calming Supplements",
+      "Minerals",
+      "Pregnancy Vitamins",
+      "Immune Support",
+      "More Categories",
+    ],
+  },
+
+  {
+    id: 3,
+    title: "Beauty",
+    icon: Sparkles,
+    items: [
+      "Face Care",
+      "Hair Care",
+      "Body Care",
+      "Decorative Cosmetics",
+      "Sun Protection",
+      "More Categories",
+    ],
+  },
+
+  {
+    id: 4,
+    title: "Hygiene",
+    icon: HandPlatter,
+    items: [
+      "Personal Hygiene",
+      "Oral Care",
+      "Soap & Wash",
+      "Baby Hygiene",
+      "Sanitary Products",
+      "More Categories",
+    ],
+  },
+
+  {
+    id: 5,
+    title: "Medical Supplies",
+    icon: Cross,
+    items: [
+      "First Aid",
+      "Bandages",
+      "Thermometers",
+      "Medical Gloves",
+      "Home Care",
+      "More Categories",
+    ],
+  },
+
+  {
+    id: 6,
+    title: "Pet Care",
+    icon: PawPrint,
+    items: [
+      "Dog Care",
+      "Cat Care",
+      "Pet Vitamins",
+      "Pet Hygiene",
+      "Pet Medicines",
+      "More Categories",
+    ],
+  },
+
+  {
+    id: 7,
+    title: "Mother & Baby",
+    icon: Baby,
+    items: [
+      "Baby Food",
+      "Baby Care",
+      "Baby Hygiene",
+      "Mother Care",
+      "Pregnancy Essentials",
+      "More Categories",
+    ],
+  },
+
+  {
+    id: 8,
+    title: "Vision Care",
+    icon: Eye,
+    items: [
+      "Contact Lenses",
+      "Lens Solution",
+      "Eye Drops",
+      "Accessories",
+      "Eye Care",
+      "More Categories",
+    ],
+  },
+
+  {
+    id: 9,
+    title: "Medical Equipment",
+    icon: MonitorSmartphone,
+    items: [
+      "Blood Pressure Monitor",
+      "Nebulizers",
+      "Glucose Meters",
+      "Thermometers",
+      "Home Diagnostics",
+      "More Categories",
+    ],
+  },
+];
+
+export default knowledgeData;
