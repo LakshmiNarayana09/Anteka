@@ -9,35 +9,36 @@ import ArticlesPage from "./pages/ArticlesPage";
 import ReviewsPage from './pages/ReviewsPage'
 import AboutPage from "./pages/AboutPage";
 import DeliveryPickupPage from './pages/DeliveryPickupPage'
+import PaymentsPage from './pages/PaymentsPage'
+import FavoritesPage from './pages/FavoritesPage'
+import AccountPage from './pages/AccountPage'
+import LicensePage from './pages/LicensePage'
+import ContactPage from "./pages/ContactPage";
+import CartPage from "./pages/CartPage";
 
 
 function App() {
   return (
     <div>
       <Routes>
-
         
         <Route path="/" element={<Home />} />
-
-        <Route path="/select-products-by-condition" element={<SelectProductsByCondition />} />
-
-        <Route path="/category/:slug" element={<CategoryPage />} />
-
-        <Route path="/product/:id" element={<ProductDetails />} />
-
-        <Route path="/products" element={<ProductDetails />} />
-
-        <Route path="/blog/:id" element={<BlogPage />} />
-
-        <Route path="/articles" element={<ArticlesPage />} />
-
-        <Route path="/reviews" element={<ReviewsPage />} />
-
+        <Route path="/medicines" element={<CategoryPage />} />
         <Route path="/about" element={<AboutPage />} />
-
-        <Route path="/delivery" element={<DeliveryPickupPage />} />
-
-        <Route path="/pickup" element={<DeliveryPickupPage />} />
+        <Route path="/delivery-pickup" element={<DeliveryPickupPage />} />
+        <Route path="/reviews" element={<ReviewsPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/payment" element={<PaymentsPage />} />
+        <Route path="/licenses" element={<LicensePage />} />
+        <Route path="/contact" element={<ContactPage />} /> 
+        <Route path="/select-products-by-condition" element={<SelectProductsByCondition />} />
+        <Route path="/products" element={<ProductDetails />} />
+        <Route path="/articles" element={<ArticlesPage />} />
+        <Route path="/reviews" element={<ReviewsPage />} />
+        <Route path="/payment" element={<PaymentsPage />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
+        <Route path="/account" element={<AccountPage />} />
+        <Route path="/cart" element={<CartPage />} />
 
       </Routes>
     </div>

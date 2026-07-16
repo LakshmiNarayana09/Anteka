@@ -4,7 +4,7 @@ import promoImage from "../../assets/hero/promo-img.png";
 import product1 from "../../assets/hero/product1.png";
 import product2 from "../../assets/hero/product2.png";
 import product3 from "../../assets/hero/product3.png";
-import { useNavigate } from "react-router-dom";
+
 
 
 const products = [
@@ -28,7 +28,7 @@ const products = [
 
 function Hero() {
 
-  const navigate = useNavigate();
+  
 
   return (
     <section className="bg-[#F7FCFD] py-8 sm:py-10 lg:py-16">
@@ -95,10 +95,6 @@ function Hero() {
             </p>
 
             <button
-              onClick={() => {
-                console.log("clicked");
-                navigate(`/products`);
-              }}
               className="
                 mt-8
                 lg:mt-12

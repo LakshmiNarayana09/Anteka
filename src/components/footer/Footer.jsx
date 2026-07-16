@@ -2,8 +2,32 @@ import React from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
+
+
+const quickLinks = [
+  { name: "About Us", path: "/about" },
+  { name: "Delivery", path: "/delivery-pickup" },
+  { name: "Reviews", path: "/reviews" },
+  { name: "Health Articles", path: "/articles" },
+  { name: "Licenses", path: "/licenses" },
+  { name: "Feedback", path: "/contact" },
+];
+
+
+const supportLinks = [
+  { name: "Payments", path: "/payment" },
+  { name: "Pickup", path: "/pickup" },
+  { name: "FAQ", path: "/faq" },
+  { name: "Vacancies", path: "/vacancies" },
+  { name: "User Agreement", path: "/user-agreement" },
+  { name: "Privacy Policy", path: "/privacy-policy" },
+];
 
 const Footer = () => {
+
+  const navigate = useNavigate();
+
   return (
     <footer className="relative bg-gradient-to-r from-[#0C2D82] via-[#0E7DB2] to-[#2DD4BF] pt-64 sm:pt-60 lg:pt-28 pb-10">
 
@@ -128,12 +152,15 @@ const Footer = () => {
             </h3>
 
             <ul className="space-y-2 text-sm text-cyan-100">
-              <li>About Us</li>
-              <li>Delivery</li>
-              <li>Pharmacies</li>
-              <li>Reviews</li>
-              <li>Health Articles</li>
-              <li>Licenses</li>
+              {quickLinks.map((link) => (
+                <li
+                  key={link.name}
+                  onClick={() => navigate(link.path)}
+                  className="cursor-pointer transition hover:text-white hover:translate-x-1"
+                >
+                  {link.name}
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -145,12 +172,15 @@ const Footer = () => {
             </h3>
 
             <ul className="space-y-2 text-sm text-cyan-100">
-              <li>Feedback</li>
-              <li>Advertising</li>
-              <li>FAQ</li>
-              <li>Vacancies</li>
-              <li>User Agreement</li>
-              <li>Privacy Policy</li>
+              {supportLinks.map((link) => (
+                <li
+                  key={link.name}
+                  onClick={() => navigate(link.path)}
+                  className="cursor-pointer transition hover:text-white hover:translate-x-1"
+                >
+                  {link.name}
+                </li>
+              ))}
             </ul>
           </div>
 

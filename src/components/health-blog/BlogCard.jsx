@@ -1,8 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
 function BlogCard({ blog }) {
-  const navigate = useNavigate();
 
   const {
     id,
@@ -15,7 +13,6 @@ function BlogCard({ blog }) {
 
   return (
     <article
-      onClick={() => navigate(`/blog/${id}`)}
       className="
         group
         flex

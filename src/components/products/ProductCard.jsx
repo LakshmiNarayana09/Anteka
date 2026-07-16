@@ -1,9 +1,8 @@
 import React from "react";
 import { Heart, ShoppingCart, Star } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 
 function ProductCard({ product }) {
-  const navigate = useNavigate();
+  
 
   const {
     image,
@@ -21,7 +20,6 @@ function ProductCard({ product }) {
 
   return (
     <div
-      onClick={() => navigate(`/product/${product.id}`)}
       className="
         bg-white
         rounded-[8px]

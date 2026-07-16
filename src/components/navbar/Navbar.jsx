@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from '../../assets/logo.png'
+import { useNavigate } from "react-router-dom";
 import {
   MapPinned,
   Menu,
@@ -32,43 +33,53 @@ const navItems = [
   {
     title: "Medicines",
     icon: Pill,
+    path: "/medicines",
   },
   {
     title: "Vitamins & Supplements",
     icon: PackagePlus,
+    path: "/select-products-by-condition",
   },
   {
     title: "Beauty",
     icon: Sparkles,
+    path: "/blog",
   },
   {
     title: "Hygiene",
     icon: Droplets,
+    path: "/select-products-by-condition",
   },
   {
     title: "Contact Lenses",
     icon: Eye,
+    path: "/select-products-by-condition",
   },
   {
     title: "Mother & Baby",
     icon: Baby,
+    path: "/articles",
   },
   {
     title: "Medical Products",
     icon: BriefcaseMedical,
+    path: "/products",
   },
   {
     title: "Pet Care",
     icon: PawPrint,
+    path: "/select-products-by-condition",
   },
   {
     title: "Medical Equipment",
     icon: Stethoscope,
+    path: "/medicines",
   },
 ];
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const navigate = useNavigate();
   return (
     <header className="w-full font-sans">
 
@@ -113,27 +124,29 @@ function Navbar() {
 
           <div className="flex items-center gap-8">
 
-            <div className="flex items-center gap-2 cursor-pointer">
+            <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate("/favorites")}>
 
               <Heart
                 size={15}
                 className="text-[#2ED3B7]"
               />
 
-              <span className="text-[#cfcfcf]">
+              <span 
+                className="text-[#cfcfcf]">
                 Favorites
               </span>
 
             </div>
 
-            <div className="flex items-center gap-2 cursor-pointer">
+            <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate("/account")}>
 
               <User
                 size={15}
                 className="text-[#2ED3B7]"
               />
 
-              <span className="text-[#cfcfcf]">
+              <span 
+                className="text-[#cfcfcf]">
                 My Account
               </span>
 
@@ -154,7 +167,7 @@ function Navbar() {
           <div className="h-[110px] flex items-center justify-between">
 
             
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 cursor-pointer" onClick={() => navigate("/")}>
                 <img
                     src={logo}
                     alt="Pharmacy Online"
@@ -280,7 +293,9 @@ function Navbar() {
                     Request Call
                 </button>
 
-                <button className="hidden lg:flex w-[52px] h-[52px] rounded-full border items-center justify-center hover:bg-[#34D4BC] hover:text-white duration-300">
+                <button 
+                  onClick={() => navigate("/cart")}
+                  className="hidden lg:flex w-[52px] h-[52px] rounded-full border items-center justify-center hover:bg-[#34D4BC] hover:text-white duration-300">
                     <ShoppingCart size={22} />
                 </button>
 
@@ -316,12 +331,13 @@ function Navbar() {
             <nav className="h-[68px] hidden xl:flex items-center justify-between">
 
             {navItems.map((item, index) => {
-                const Icon = item.icon;
+              const Icon = item.icon;
 
-                return (
+              return (
                 <button
-                    key={index}
-                    className="
+                  key={index}
+                  onClick={() => navigate(item.path)}
+                  className="
                     group
                     flex
                     items-center
@@ -330,32 +346,19 @@ function Navbar() {
                     px-3
                     transition-all
                     duration-300
-                    "
+                  "
                 >
-                    <Icon
+                  <Icon
                     size={22}
-                    className="
-                        text-white/90
-                        group-hover:scale-110
-                        transition-transform
-                    "
-                    />
+                    className="text-white/90 group-hover:scale-110 transition-transform"
+                  />
 
-                    <span
-                    className="
-                        text-white
-                        text-[15px]
-                        font-semibold
-                        whitespace-nowrap
-                        tracking-wide
-                    "
-                    >
+                  <span className="text-white text-[15px] font-semibold whitespace-nowrap tracking-wide">
                     {item.title}
-                    </span>
+                  </span>
                 </button>
-                );
+              );
             })}
-
             </nav>
 
         </div>

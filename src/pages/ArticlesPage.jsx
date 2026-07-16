@@ -13,6 +13,7 @@ function ArticlesPage() {
     <div>
       <>
         <Navbar />
+        
         <CategoryNav />
 
         <Breadcrumb />

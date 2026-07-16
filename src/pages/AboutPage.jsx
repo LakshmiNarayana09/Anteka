@@ -2,8 +2,8 @@ import React from "react";
 import Navbar from "../components/navbar/Navbar";
 import CategoryNav from "../components/category/CategoryNav";
 import Footer from "../components/footer/Footer";
-import Breadcrumb from "../components/pages/reviews/Breadcrumb";
-import PageTitle from "../components/pages/reviews/PageTitle";
+import Breadcrumb from "../components/pages/about/Breadcrumb";
+import PageTitle from "../components/pages/about/PageTitle";
 import QuestionSection from '../components/pages/reviews/QuestionSection'
 import AboutIntro from '../components/pages/about/AboutIntro'
 import Features from '../components/pages/about/Features'

@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+
 
 const categories = [
   {
@@ -52,16 +52,9 @@ const categories = [
 ];
 
 function CategoryNav() {
-  const navigate = useNavigate();
+  
 
-  const handleCategoryClick = (category) => {
-    const slug = category.title
-      .toLowerCase()
-      .replace(/\s+/g, "-")
-      .replace(/[^\w-]+/g, "");
-
-    navigate(`/category/${slug}`);
-  };
+  
 
   return (
     <div className="w-full mt-5">
@@ -81,7 +74,6 @@ function CategoryNav() {
         {categories.map((item, index) => (
           <button
             key={index}
-            onClick={() => handleCategoryClick(item)}
             className={`
               flex
               h-[30px]
