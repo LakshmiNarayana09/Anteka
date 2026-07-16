@@ -330,35 +330,35 @@ function Navbar() {
 
             <nav className="h-[68px] hidden xl:flex items-center justify-between">
 
-            {navItems.map((item, index) => {
-              const Icon = item.icon;
+              {navItems.map((item, index) => {
+                const Icon = item.icon;
 
-              return (
-                <button
-                  key={index}
-                  onClick={() => navigate(item.path)}
-                  className="
-                    group
-                    flex
-                    items-center
-                    gap-3
-                    h-full
-                    px-3
-                    transition-all
-                    duration-300
-                  "
-                >
-                  <Icon
-                    size={22}
-                    className="text-white/90 group-hover:scale-110 transition-transform"
-                  />
+                return (
+                  <button
+                    key={index}
+                    onClick={() => navigate(item.path)}
+                    className="
+                      group
+                      flex
+                      items-center
+                      gap-3
+                      h-full
+                      px-3
+                      transition-all
+                      duration-300
+                    "
+                  >
+                    <Icon
+                      size={22}
+                      className="text-white/90 group-hover:scale-110 transition-transform"
+                    />
 
-                  <span className="text-white text-[15px] font-semibold whitespace-nowrap tracking-wide">
-                    {item.title}
-                  </span>
-                </button>
-              );
-            })}
+                    <span className="text-white text-[15px] font-semibold whitespace-nowrap tracking-wide">
+                      {item.title}
+                    </span>
+                  </button>
+                );
+              })}
             </nav>
 
         </div>
@@ -400,37 +400,35 @@ function Navbar() {
 
                 <div className="mt-5">
 
-                    {navItems.map((item, index) => {
+                      {navItems.map((item, index) => {
+                        const Icon = item.icon;
 
-                    const Icon = item.icon;
-
-                    return (
-
-                        <button
-                        key={index}
-                        className="w-full flex justify-between items-center py-4 border-b"
-                        >
-
-                        <div className="flex items-center gap-3">
-
+                        return (
+                          <button
+                            key={index}
+                            onClick={() => navigate(item.path)}
+                            className="
+                              group
+                              flex
+                              items-center
+                              gap-3
+                              h-full
+                              px-3
+                              transition-all
+                              duration-300
+                            "
+                          >
                             <Icon
-                            size={20}
-                            className="text-[#0B2D87]"
+                              size={22}
+                              className="text-white/90 group-hover:scale-110 transition-transform"
                             />
 
-                            <span className="font-medium">
-                            {item.title}
+                            <span className="text-white text-[15px] font-semibold whitespace-nowrap tracking-wide">
+                              {item.title}
                             </span>
-
-                        </div>
-
-                        <ChevronDown size={18} />
-
-                        </button>
-
-                    );
-
-                    })}
+                          </button>
+                        );
+                      })}
 
                 </div>
 
