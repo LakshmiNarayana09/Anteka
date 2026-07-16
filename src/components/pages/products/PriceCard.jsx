@@ -1,7 +1,7 @@
 import React from "react";
 import { Heart, Minus, Plus, ShoppingCart } from "lucide-react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 
 const PriceCard = () => {
   const [quantity, setQuantity] = useState(1);
@@ -14,7 +14,7 @@ const PriceCard = () => {
     setQuantity(quantity + 1);
   };
 
-   const navigate = useNavigate();
+   
 
   return (
     <div className="w-full bg-white border border-gray-200 rounded-lg p-6 shadow-sm lg:sticky lg:top-6">
@@ -80,7 +80,6 @@ const PriceCard = () => {
         </button>
 
         <button 
-          onClick={() => navigate("/payment")}
           className="w-full h-12 rounded-md border border-[#2FD3AE] text-[#2FD3AE] hover:bg-[#2FD3AE] hover:text-white font-semibold transition">
           Buy Now
         </button>
