@@ -36,7 +36,7 @@ const navItems = [
     path: "/medicines",
   },
   {
-    title: "Vitamins & Supplements",
+    title: "Vitamins",
     icon: PackagePlus,
     path: "/select-products-by-condition",
   },
@@ -326,9 +326,9 @@ function Navbar() {
             to-[#37D5BC]
         "
         >
-        <div className="max-w-[1440px] mx-auto px-6">
+        <div className="max-w-[1440px] mx-auto px-3 lg:px-4 xl:px-6">
 
-            <nav className="h-[68px] hidden lg:flex items-center justify-between">
+            <nav className="hidden lg:flex items-center justify-center gap-2 xl:gap-5 h-[68px]">
 
               {navItems.map((item, index) => {
                 const Icon = item.icon;
@@ -341,19 +341,19 @@ function Navbar() {
                       group
                       flex
                       items-center
-                      gap-3
                       h-full
-                      px-3
+                      gap-1 lg:gap-2 xl:gap-3
+                      px-1 lg:px-1.5 xl:px-3
                       transition-all
                       duration-300
                     "
                   >
                     <Icon
                       size={22}
-                      className="text-white/90 group-hover:scale-110 transition-transform"
+                      className="text-white/90 w-4 h-4 xl:w-5 xl:h-5"
                     />
 
-                    <span className="text-white text-[15px] font-semibold whitespace-nowrap tracking-wide">
+                    <span className="text-[12px] lg:text-[13px] xl:text-[15px] font-semibold whitespace-nowrap">
                       {item.title}
                     </span>
                   </button>
