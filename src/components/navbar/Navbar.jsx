@@ -83,72 +83,69 @@ function Navbar() {
   return (
     <header className="w-full font-sans">
 
-      
-      <div className="hidden lg:flex h-10 bg-[#1b1b1b] text-white text-[14px]">
+        <div className="hidden lg:flex h-10 bg-[#1b1b1b] text-white text-[14px]">
 
-        <div className="max-w-[1440px] mx-auto w-full flex justify-between items-center px-6">
+          <div className="max-w-[1440px] mx-auto w-full flex justify-between items-center px-6">
 
-          
+            <div className="flex items-center gap-10">
 
-          <div className="flex items-center gap-10">
+              <div className="flex items-center gap-2 cursor-pointer">
 
-            <div className="flex items-center gap-2 cursor-pointer">
+                <MapPinned
+                  size={15}
+                  className="text-[#2ED3B7]"
+                />
 
-              <MapPinned
-                size={15}
-                className="text-[#2ED3B7]"
-              />
+                <span className="text-[#cfcfcf]">
+                  New York, USA
+                </span>
 
-              <span className="text-[#cfcfcf]">
-                New York, USA
-              </span>
+              </div>
 
-            </div>
+              <div className="flex items-center gap-2 cursor-pointer">
 
-            <div className="flex items-center gap-2 cursor-pointer">
+                <Menu
+                  size={15}
+                  className="text-[#2ED3B7]"
+                />
 
-              <Menu
-                size={15}
-                className="text-[#2ED3B7]"
-              />
+                <span className="text-[#cfcfcf]">
+                  Service Pages
+                </span>
 
-              <span className="text-[#cfcfcf]">
-                Service Pages
-              </span>
+              </div>
 
-            </div>
+            </div>  
 
-          </div>
+            <div className="flex items-center gap-8">
 
-          
+              <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate("/favorites")}>
 
-          <div className="flex items-center gap-8">
+                <Heart
+                  size={15}
+                  className="text-[#2ED3B7]"
+                />
 
-            <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate("/favorites")}>
+                <span 
+                  className="text-[#cfcfcf]">
+                  Favorites
+                </span>
 
-              <Heart
-                size={15}
-                className="text-[#2ED3B7]"
-              />
+              </div>
 
-              <span 
-                className="text-[#cfcfcf]">
-                Favorites
-              </span>
+              <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate("/account")}>
 
-            </div>
+                <User
+                  size={15}
+                  className="text-[#2ED3B7]"
+                />
 
-            <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate("/account")}>
+                <span 
+                  className="text-[#cfcfcf]">
+                  My Account
+                </span>
 
-              <User
-                size={15}
-                className="text-[#2ED3B7]"
-              />
-
-              <span 
-                className="text-[#cfcfcf]">
-                My Account
-              </span>
+              </div>
 
             </div>
 
@@ -156,309 +153,302 @@ function Navbar() {
 
         </div>
 
-      </div>
-
       
+        <div className="bg-white border-b border-gray-200">
 
-      <div className="bg-white border-b border-gray-200">
+          <div className="max-w-[1440px] mx-auto px-4 lg:px-6">
 
-        <div className="max-w-[1440px] mx-auto px-6">
+            <div className="min-h-[110px] flex items-center">
 
-          <div className="h-[110px] flex items-center justify-between">
-
-            
-            <div className="flex items-center gap-4 cursor-pointer" onClick={() => navigate("/")}>
-                <img
+              
+              <div className="flex-1 flex items-center">
+                <div
+                  className="flex items-center gap-3 cursor-pointer"
+                  onClick={() => navigate("/")}
+                >
+                  <img
                     src={logo}
                     alt="Pharmacy Online"
                     className="w-[62px] h-[62px] object-contain"
-                />
+                  />
 
-                <div>
+                  <div>
                     <h1 className="text-[20px] font-bold text-[#444444] leading-none">
-                    Pharmacy<span className="font-normal">.online</span>
+                      Pharmacy
+                      <span className="font-normal">.online</span>
                     </h1>
 
                     <p className="text-[14px] text-[#7A7A7A] mt-1">
-                    Your Online Pharmacy
+                      Your Online Pharmacy
                     </p>
+                  </div>
                 </div>
-            </div>
+              </div>
 
-            
+              <div className="hidden lg:flex flex-1 items-center justify-center gap-6">
 
-            <div className="hidden xl:flex items-center gap-3">
-                {[FaFacebookF, FaInstagram, FaYoutube].map((Icon, index) => (
+                
+                <div className="hidden xl:flex items-center gap-3">
+                  {[FaFacebookF, FaInstagram, FaYoutube].map((Icon, index) => (
                     <div
-                    key={index}
-                    className="w-10 h-10 rounded-full border flex items-center justify-center hover:bg-[#34d4bc] hover:text-white duration-300 cursor-pointer"
+                      key={index}
+                      className="w-10 h-10 rounded-full border flex items-center justify-center hover:bg-[#34D4BC] hover:text-white duration-300 cursor-pointer"
                     >
-                    <Icon size={18} />
+                      <Icon size={18} />
                     </div>
-                ))}
-            </div>
-
-            
-
-            <div className="hidden lg:flex items-center gap-4">
-
-              <Mail
-                size={24}
-                className="text-[#32D5B9]"
-              />
-
-              <div>
-
-                <h3 className="font-bold text-[18px]">
-
-                  INFO@RESTOLL.RU
-
-                </h3>
-
-                <p className="text-gray-500 text-sm">
-
-                  Email us
-
-                </p>
-
-              </div>
-
-            </div>
-
-            
-
-            <div className="hidden md:flex items-center gap-4">
-
-              <Phone
-                size={24}
-                className="text-[#32D5B9]"
-              />
-
-              <div>
-
-                <h3 className="font-bold text-[18px]">
-
-                  8-800-777-22-33
-
-                </h3>
-
-                <p className="text-gray-500 text-sm">
-
-                  24/7 Support
-
-                </p>
-
-              </div>
-
-            </div>
-
-            
-
-            <div className="hidden 2xl:flex items-center gap-4">
-
-              <Phone
-                size={24}
-                className="text-[#32D5B9]"
-              />
-
-              <div>
-
-                <h3 className="font-bold text-[18px]">
-
-                  (800) 223-34-03
-
-                </h3>
-
-                <p className="text-gray-500 text-sm">
-
-                  Online Pharmacy
-
-                </p>
-
-              </div>
-
-            </div>
-
-            
-
-            <div className="flex items-center gap-4">
+                  ))}
+                </div>
 
                 
+                <div className="hidden xl:flex items-center gap-3">
+                  <Mail
+                    size={22}
+                    className="text-[#32D5B9]"
+                  />
 
-                <button className="hidden lg:flex w-[52px] h-[52px] rounded-full border items-center justify-center hover:bg-[#34D4BC] hover:text-white duration-300">
-                    <Search size={22} />
-                </button>
+                  <div>
+                    <h3 className="font-bold text-[16px]">
+                      INFO@RESTOLL.RU
+                    </h3>
 
-                <button className="hidden md:flex px-8 h-[52px] rounded-full bg-[#35D4BC] text-white font-semibold hover:bg-[#28c3ab] duration-300 items-center">
-                    Request Call
-                </button>
-
-                <button 
-                  onClick={() => navigate("/cart")}
-                  className="hidden lg:flex w-[52px] h-[52px] rounded-full border items-center justify-center hover:bg-[#34D4BC] hover:text-white duration-300">
-                    <ShoppingCart size={22} />
-                </button>
+                    <p className="text-gray-500 text-sm">
+                      Email us
+                    </p>
+                  </div>
+                </div>
 
                 
+                <div className="flex items-center gap-3">
+                  <Phone
+                    size={22}
+                    className="text-[#32D5B9]"
+                  />
+
+                  <div>
+                    <h3 className="font-bold text-[16px]">
+                      8-800-777-22-33
+                    </h3>
+
+                    <p className="text-gray-500 text-sm">
+                      24/7 Support
+                    </p>
+                  </div>
+                </div>
+
+                
+                <div className="hidden 2xl:flex items-center gap-3">
+                  <Phone
+                    size={22}
+                    className="text-[#32D5B9]"
+                  />
+
+                  <div>
+                    <h3 className="font-bold text-[16px]">
+                      (800) 223-34-03
+                    </h3>
+
+                    <p className="text-gray-500 text-sm">
+                      Online Pharmacy
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+              
+              <div className="flex-1 flex items-center justify-end gap-3">
+
+                <button className="hidden lg:flex w-12 h-12 rounded-full border items-center justify-center hover:bg-[#34D4BC] hover:text-white duration-300">
+                  <Search size={20} />
+                </button>
+
+                <button className="hidden lg:flex h-12 px-5 xl:px-8 rounded-full bg-[#35D4BC] text-white font-semibold hover:bg-[#28c3ab] duration-300 items-center">
+                  Request Call
+                </button>
 
                 <button
-                    onClick={() => setMenuOpen(!menuOpen)}
-                    className="lg:hidden w-11 h-11 rounded-full border flex items-center justify-center"
+                  onClick={() => navigate("/cart")}
+                  className="hidden lg:flex w-12 h-12 rounded-full border items-center justify-center hover:bg-[#34D4BC] hover:text-white duration-300"
                 >
-                    {menuOpen ? <X size={24} /> : <Menu size={24} />}
+                  <ShoppingCart size={20} />
                 </button>
+
+                <button
+                  onClick={() => setMenuOpen(!menuOpen)}
+                  className="lg:hidden w-11 h-11 rounded-full border flex items-center justify-center"
+                >
+                  {menuOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
+
+              </div>
 
             </div>
 
           </div>
-
         </div>
-
-      </div>
+      
 
       
 
         <div
-        className="
+          className="
             bg-gradient-to-r
             from-[#0B2D87]
             via-[#155E98]
             to-[#37D5BC]
-        "
+          "
         >
-        <div className="max-w-[1440px] mx-auto px-6">
+          <div className="max-w-[1440px] mx-auto px-4 lg:px-6">
 
-            <nav className="h-[68px] hidden lg:flex items-center justify-between">
+            <nav className="hidden lg:flex h-[68px] items-center">
 
-              {navItems.map((item, index) => {
-                const Icon = item.icon;
+              <div
+                className="
+                  flex
+                  items-center
+                  gap-2
+                  xl:gap-4
+                  w-full
+                  overflow-x-auto
+                  whitespace-nowrap
+                  scrollbar-hide
+                "
+              >
+                {navItems.map((item, index) => {
+                  const Icon = item.icon;
 
-                return (
-                  <button
-                    key={index}
-                    onClick={() => navigate(item.path)}
-                    className="
-                      group
-                      flex
-                      items-center
-                      gap-3
-                      h-full
-                      px-3
-                      transition-all
-                      duration-300
-                    "
-                  >
-                    <Icon
-                      size={22}
-                      className="text-white/90 group-hover:scale-110 transition-transform"
-                    />
+                  return (
+                    <button
+                      key={index}
+                      onClick={() => navigate(item.path)}
+                      className="
+                        flex
+                        items-center
+                        gap-2
+                        px-3
+                        xl:px-4
+                        py-2
+                        rounded-md
+                        text-white
+                        hover:bg-white/10
+                        transition-all
+                        duration-300
+                        shrink-0
+                      "
+                    >
+                      <Icon
+                        size={20}
+                        className="text-white"
+                      />
 
-                    <span className="text-white text-[15px] font-semibold whitespace-nowrap tracking-wide">
-                      {item.title}
-                    </span>
-                  </button>
-                );
-              })}
+                      <span className="text-[14px] xl:text-[15px] font-medium">
+                        {item.title}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+
             </nav>
 
-        </div>
-        {menuOpen && (
-            <div className="xl:hidden bg-white shadow-xl border-t">
+          </div>
+          {menuOpen && (
+              <div className="lg:hidden bg-white shadow-xl border-t">
 
-                <div className="px-6 py-6">
+                  <div className="px-6 py-6">
 
-                
+                  
 
-                <button className="w-full h-12 rounded-full border flex items-center justify-center gap-2 mb-4">
-                    <Search size={20} />
-                    Search
-                </button>
+                  <button className="w-full h-12 rounded-full border flex items-center justify-center gap-2 mb-4">
+                      <Search size={20} />
+                      Search
+                  </button>
 
-                
+                  
 
-                <button className="w-full h-12 rounded-full bg-[#35D4BC] text-white font-semibold mb-6">
-                    Request Call
-                </button>
+                  <button className="w-full h-12 rounded-full bg-[#35D4BC] text-white font-semibold mb-6">
+                      Request Call
+                  </button>
 
-                
+                  
 
-                <div className="space-y-4 border-b pb-5">
+                  <div className="space-y-4 border-b pb-5">
 
-                    <div className="flex items-center gap-3">
-                    <Mail className="text-[#35D4BC]" size={20} />
-                    INFO@RESTOLL.RU
-                    </div>
+                      <div className="flex items-center gap-3">
+                      <Mail className="text-[#35D4BC]" size={20} />
+                      INFO@RESTOLL.RU
+                      </div>
 
-                    <div className="flex items-center gap-3">
-                    <Phone className="text-[#35D4BC]" size={20} />
-                    8-800-777-22-33
-                    </div>
+                      <div className="flex items-center gap-3">
+                      <Phone className="text-[#35D4BC]" size={20} />
+                      8-800-777-22-33
+                      </div>
 
-                </div>
+                  </div>
 
-                
+                  
 
-                <div className="mt-5">
+                  <div className="mt-5">
 
-                    {navItems.map((item, index) => {
+                      {navItems.map((item, index) => {
 
-                    const Icon = item.icon;
+                      const Icon = item.icon;
 
-                    return (
+                      return (
 
-                        <button
+                          <button
+                            key={index}
+                            onClick={() => {
+                              navigate(item.path);
+                              setMenuOpen(false); 
+                            }}
+                            className="w-full flex justify-between items-center py-4 border-b"
+                          >
+
+                          <div className="flex items-center gap-3">
+
+                              <Icon
+                              size={20}
+                              className="text-[#0B2D87]"
+                              />
+
+                              <span className="font-medium">
+                              {item.title}
+                              </span>
+
+                          </div>
+
+                          <ChevronDown size={18} />
+
+                          </button>
+
+                      );
+
+                      })}
+
+                  </div>
+
+                  
+
+                  <div className="flex gap-3 mt-6">
+
+                      {[FaFacebookF, FaInstagram, FaYoutube].map((Icon, index) => (
+
+                      <div
                           key={index}
-                          onClick={() => {
-                            navigate(item.path);
-                            setMenuOpen(false); 
-                          }}
-                          className="w-full flex justify-between items-center py-4 border-b"
-                        >
+                          className="w-10 h-10 rounded-full border flex items-center justify-center hover:bg-[#35D4BC] hover:text-white duration-300 cursor-pointer"
+                      >
+                          <Icon size={18} />
+                      </div>
 
-                        <div className="flex items-center gap-3">
+                      ))}
 
-                            <Icon
-                            size={20}
-                            className="text-[#0B2D87]"
-                            />
+                  </div>
 
-                            <span className="font-medium">
-                            {item.title}
-                            </span>
+                  </div>
 
-                        </div>
-
-                        <ChevronDown size={18} />
-
-                        </button>
-
-                    );
-
-                    })}
-
-                </div>
-
-                
-
-                <div className="flex gap-3 mt-6">
-
-                    {[FaFacebookF, FaInstagram, FaYoutube].map((Icon, index) => (
-
-                    <div
-                        key={index}
-                        className="w-10 h-10 rounded-full border flex items-center justify-center hover:bg-[#35D4BC] hover:text-white duration-300 cursor-pointer"
-                    >
-                        <Icon size={18} />
-                    </div>
-
-                    ))}
-
-                </div>
-
-                </div>
-
-            </div>
-        )}
+              </div>
+          )}
         </div>
     </header>
   );
