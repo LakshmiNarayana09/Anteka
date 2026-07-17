@@ -5,7 +5,6 @@ import AboutCompany from '../components/about-company/AboutCompany'
 import HealthBlog from '../components/health-blog/HealthBlog'
 import Footer from '../components/footer/Footer'
 import Products from '../components/products/Products'
-import { useParams } from "react-router-dom";
 import Breadcrumb from '../components/breadcrumb/Breadcrumb'
 import PageTitle from '../components/breadcrumb/PageTitle'
 import Sidebar from '../components/breadcrumb/Sidebar'
@@ -13,7 +12,6 @@ import ProductsHeader from '../components/breadcrumb/ProductsHeader'
 
 
 function CategoryPage() {
-  const { slug } = useParams();
   
   return (
     <div>
@@ -37,7 +35,7 @@ function CategoryPage() {
             <ProductsHeader />
 
             <div className="mt-6">
-              <Products />
+              <Products columns={4} limit={4} />
             </div>
 
           </div>
