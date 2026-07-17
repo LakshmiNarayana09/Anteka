@@ -328,7 +328,7 @@ function Navbar() {
         >
         <div className="max-w-[1440px] mx-auto px-6">
 
-            <nav className="h-[68px] hidden xl:flex items-center justify-between">
+            <nav className="h-[68px] hidden lg:flex items-center justify-between">
 
               {navItems.map((item, index) => {
                 const Icon = item.icon;
